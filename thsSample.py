@@ -8,23 +8,23 @@ class LoginScreen(tk.Tk):
         self.title("Login")
         self.geometry("800x600")
 
-        # Create a frame for the login form
+        # Log in form
         self.login_frame = tk.Frame(self, bg='white')
         self.login_frame.place(relx=0.5, rely=0.5, anchor='center')
 
-        # Username label and entry
+        # Username
         self.username_label = tk.Label(self.login_frame, text="Username", bg='white')
         self.username_label.pack(pady=10)
         self.username_entry = tk.Entry(self.login_frame)
         self.username_entry.pack(pady=10)
 
-        # Password label and entry
+        # Password
         self.password_label = tk.Label(self.login_frame, text="Password", bg='white')
         self.password_label.pack(pady=10)
         self.password_entry = tk.Entry(self.login_frame, show='*')
         self.password_entry.pack(pady=10)
 
-        # Login button
+        # button
         self.login_button = tk.Button(self.login_frame, text="Login", command=self.login)
         self.login_button.pack(pady=10)
 
@@ -46,14 +46,13 @@ class GateAccessSystem(tk.Tk):
         self.title("Gate Access System")
         self.geometry("800x600")
 
-        # Create a frame for the left side options
         self.left_frame = tk.Frame(self, width=200, bg='lightgrey')
         self.left_frame.pack(side='left', fill='y')
 
-        # Create buttons for each option
+        # buttons 
         self.create_left_menu()
 
-        # Create a frame for the main content area
+        # frame for the main content area
         self.main_frame = tk.Frame(self, bg='white')
         self.main_frame.pack(side='right', fill='both', expand=True)
 
